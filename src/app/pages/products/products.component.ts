@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.getCharacters().subscribe((data) => {
-      this.characters = data.results; // Adaptamos a la respuesta de la API
+      this.characters = data.results;
     });
   }
 }

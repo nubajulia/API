@@ -8,14 +8,12 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   private _http = inject(HttpClient);
-  private urlBase: string = 'https://rickandmortyapi.com/api/character'; // Nueva API
+  private urlBase: string = 'https://rickandmortyapi.com/api/character';
 
-  // Obtener la lista de personajes
   getCharacters(): Observable<any> {
     return this._http.get<any>(this.urlBase);
   }
 
-  // Obtener un personaje por ID
   getCharacter(id: number): Observable<any> {
     return this._http.get<any>(`${this.urlBase}/${id}`);
   }
